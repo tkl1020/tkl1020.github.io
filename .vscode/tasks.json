@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build Tailwind CSS",
+        "type": "shell",
+        "command": "npx @tailwindcss/cli --input css/input.css --output css/output.css --watch",
+        "isBackground": true,
+        "problemMatcher": {
+          "owner": "tailwind",
+          "pattern": {
+            "regexp": "^Error.*$",
+            "file": 1,
+            "location": 2,
+            "message": 3
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": ".",
+            "endsPattern": "."
+          }
+        }
+      }
+    ]
+  }
